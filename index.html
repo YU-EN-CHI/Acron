@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-    <title>uwaaaaaaaaaaaaa</title>
+    <title>po</title>
     <meta name="google-site-verification" content="Gcx10U7EzsqrkifV-fw4V0rH629wq1qSDH5aK2ezVf8" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
     <header class="mb-3">
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Amusement Park</span>
+                <span class="navbar-brand mb-0 h1">uwaaaaaaaaaaaaa</span>
             </div>
         </nav>
     </header>
@@ -28,7 +28,7 @@
     <div class="container">
 
         <div class="alert alert-success mb-3" role="alert">
-		<p><a href="sabun/sabun.zip"><span style="font-size: x-large;">差分一括ダウンロード</span></a></b></div></p>
+		<p><a href="http://rarehero2000.web.fc2.com/sabun/sabun.zip"><span style="font-size: x-large;">差分一括ダウンロード</span></a></b></div></p>
         </div>
 
         <!--ここから難易度表本体-->
@@ -111,14 +111,14 @@ function makeBMSTable(info, mark, order) {
 	}
 
 obj.html("");
-$("<thead class='table-dark'><tr><th>Level</th><th>Title (IR)</th><th>Artist (SongDL)</th><th>DL</th><th>Comment</th><th>Date</th></tr></thead><tbody>")
+$("<thead class='table-dark'><tr><th>Level</th><th>Title (IR)</th><th>Artist (SongDL)</th></tr></thead><tbody>")
     .appendTo(obj);
 
 var obj_sep = null;
 for (var i = 0; i < info.length; i++) {
     if (x != info[i].level) {
         if (obj_sep != null) {
-            obj_sep.html("<td colspan='6' class='score-summary-cell'><b>" + mark + x + " (" + count + "譜面)</b></td>");
+            obj_sep.html("<td colspan='3' class='score-summary-cell'><b>" + mark + x + " (" + count + "譜面)</b></td>");
         }
         // 譜面数行に score-summary クラスを付与
         obj_sep = $("<tr class='score-summary' style='text-align:center' id='" + mark + info[i].level + "'></tr>");
@@ -155,30 +155,6 @@ for (var i = 0; i < info.length; i++) {
         $("<td width='35%'>" + info[i].artist + "</td>").appendTo(str);
     }
                     
-    // sabun
-    if (info[i].url_diff != "" && info[i].url_diff != null) {
-        $("<td width='10%'>" +
-            "<a href='" + info[i].url_diff + "' target='_blank'>" +
-            "<img src='images/Download.png' alt='Download' width='25' height='25'>" +
-            "</a></td>")
-            .appendTo(str);
-    } else {
-        $("<td width='10%'>非公開</td>").appendTo(str);
-    }
-                    
-    // Comment
-    $("<td width='20%'>" + info[i].comment + "</td>").appendTo(str);
-
-    // Date (日付)
-    if (info[i].date && info[i].date !== "") {
-        let dateObj = new Date(info[i].date);
-        let formattedDate = dateObj.getFullYear() + "/" +
-                            ("0" + (dateObj.getMonth() + 1)).slice(-2) + "/" +
-                            ("0" + dateObj.getDate()).slice(-2);
-        $("<td width='10%'>" + formattedDate + "</td>").appendTo(str);
-    } else {
-        $("<td width='10%'>-</td>").appendTo(str);
-    }
 
     str.appendTo(obj);
     count++;
@@ -186,7 +162,7 @@ for (var i = 0; i < info.length; i++) {
 $("</tbody>").appendTo(obj);
 
 if (obj_sep != null) {
-    obj_sep.html("<td class='score-summary-cell' style='text-align:center' colspan='6'><b>" + mark + x +
+    obj_sep.html("<td class='score-summary-cell' style='text-align:center' colspan='3'><b>" + mark + x +
         " (" + count + "譜面)</b></td>");
 }
             }
