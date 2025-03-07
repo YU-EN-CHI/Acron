@@ -45,7 +45,6 @@ thead th {
 
 .table-container {
     max-width: 900px;  /* アラートボックス程度の横幅に調整 */
-    max-height: 200px; /* アラートボックス程度の高さに調整 */
     display: flex;
     justify-content: center; /* 水平方向の中央揃え */
     margin: 0 auto; /* 中央配置 */
