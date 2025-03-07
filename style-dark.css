@@ -43,6 +43,15 @@ thead th {
   border-bottom: 1px solid #82786a !important;
 }
 
+.table-container {
+    max-width: 500px;  /* アラートボックス程度の横幅に調整 */
+    max-height: 200px; /* アラートボックス程度の高さに調整 */
+}
+
+.table-container table {
+    width: 100%;
+}
+
 /* ★ 譜面数行（score-summary）：常に背景色 #292b2c に固定 */
 .table-striped tbody tr.score-summary {
   background-color: #17191a !important;
